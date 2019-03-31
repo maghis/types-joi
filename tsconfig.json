@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "lib": ["es2018"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "outDir": "./build/",
+        "rootDir": "./",
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2018"
+    },
+    "include": ["index.d.ts", "test.ts"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "types-joi",
+  "version": "1.0.0",
+  "description": "TypeScript types for joi (Object schema description language and validator for JavaScript objects) https://github.com/hapijs/joi",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "tsc"
+  },
+  "author": "maghis",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "11.12.2",
+    "typescript": "3.4.1"
+  }
+}
