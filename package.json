@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "TypeScript types for joi (Object schema description language and validator for JavaScript objects) https://github.com/hapijs/joi",
   "types": "index.d.ts",
+  "files": ["index.d.ts"],
   "scripts": {
     "test": "tsc"
   },
