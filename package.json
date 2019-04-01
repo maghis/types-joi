@@ -9,10 +9,12 @@
     "validation",
     "joi"
   ],
+  "main": "index.js",
   "types": "index",
   "typeScriptVersion": "3.4.1",
   "files": [
-    "index.d.ts"
+    "index.d.ts",
+    "index.js"
   ],
   "scripts": {
     "test": "tsc"

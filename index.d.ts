@@ -172,7 +172,7 @@ type Schema<T> =
     NonNullable<T> extends string ? StringSchema<T> :
     ObjectSchema<T>;
 
-declare module "joi" {
+declare module "types-joi" {
     function attempt<T>(value: any, schema: BaseSchema<T>, message?: string | Error): T;
     type InterfaceFrom<T extends BaseSchema<any>> = T extends BaseSchema<infer U> ? U : never;
 

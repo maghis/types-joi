@@ -1,5 +1,5 @@
-import * as joi from "joi";
-import { InterfaceFrom } from "joi";
+import * as joi from "types-joi";
+import { InterfaceFrom } from "types-joi";
 
 const schema = joi
     .object({

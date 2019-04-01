@@ -13,8 +13,8 @@ npm i joi types-joi
 Use it:
 
 ```ts
-import * as joi from "joi";
-import { InterfaceFrom } from "joi";
+import * as joi from "types-joi";
+import { InterfaceFrom } from "types-joi";
 
 const messageSchema = joi.object({
     status: joi.number().required(),
