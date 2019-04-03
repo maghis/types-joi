@@ -5,13 +5,27 @@ type PickNot<T, K extends keyof T> = {
 type DictObj<T> = { [key: string]: T };
 
 declare module "types-joi" {
-    type ErrorType = Error;
-    type Callback<T> = ((err: null, value: T) => void) | ((err: ErrorType, value: null) => void);
+    type Callback<T> = ((err: null, value: T) => void) | ((err: ValidationError, value: null) => void);
+
+    interface JoiError {
+        readonly message: string;
+        readonly path: any[];
+        readonly type: string;
+        readonly context: any;
+    }
+
+    interface ValidationError extends Error {
+        readonly name: "ValidationError";
+        readonly isJoi: true;
+        readonly details: JoiError[];
+        annotate(): string;
+        readonly _object: any;
+    }
 
     type DefaultMethod<T> = (context: any) => T;
 
     interface ValidateFail<T> extends Promise<T> {
-        readonly error: ErrorType;
+        readonly error: ValidationError;
         readonly value: any;
     }
 
