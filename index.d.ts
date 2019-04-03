@@ -18,7 +18,7 @@ declare module "types-joi" {
         readonly name: "ValidationError";
         readonly isJoi: true;
         readonly details: JoiError[];
-        annotate(): string;
+        annotate(stripColors?: boolean): string;
         readonly _object: any;
     }
 
