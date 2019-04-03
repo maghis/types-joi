@@ -45,6 +45,20 @@ const len = aString.length;
 function handleObj(obj: Matching) {
     const test: number = obj.field
 }
+type PickNot<T, K extends keyof T> = {
+    [P in keyof T]: P extends K ? undefined : T[P];
+};
+
+const sample = {
+    hello: "test",
+    bla: true
+};
+
+type SampleType = typeof sample;
+
+const someObject = undefined as any as PickNot<SampleType, "hello">;
+const someOther = joi.object().pattern(/test/, joi.string().required());
+const thing = joi.attempt(undefined, someOther)["test"];
 
 (async () => {
     const res = await schema.validate({ test: "aaa" });
@@ -60,3 +74,5 @@ function handleObj(obj: Matching) {
     const result: Matching = joi.attempt(undefined, metricsApiSchema);
     const someNumber: number = result.field;
 })();
+
+const emptyObj = joi.object();
