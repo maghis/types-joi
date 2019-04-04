@@ -96,9 +96,7 @@ declare module "types-joi" {
     interface ArraySchema<T = any[] | undefined> extends AnySchema<T> {
         // sparse([enabled])
         // single([enabled])
-        items<U>(schema: Schema<U>): T extends undefined
-            ? Schema<NonNullable<U>[] | undefined>
-            : Schema<NonNullable<U>[]>;
+        items<U>(schema: Schema<U>): Schema<NonNullable<U>[] | undefined>;
         // ordered(type)
 
         min(limit: number): Schema<T>;
@@ -219,7 +217,7 @@ declare module "types-joi" {
     type InterfaceFrom<T extends BaseSchema<any>> = T extends BaseSchema<infer U> ? U : never;
 
     function any(): Schema<unknown | undefined>;
-    function array(): Schema<any[] | undefined>;
+    function array(): Schema<unknown[] | undefined>;
     function boolean(): Schema<boolean | undefined>;
     function binary(): Schema<Buffer | undefined>;
     function date(): Schema<Date | undefined>;
