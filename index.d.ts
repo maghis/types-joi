@@ -97,8 +97,8 @@ declare module "types-joi" {
         // sparse([enabled])
         // single([enabled])
         items<U>(schema: Schema<U>): T extends undefined
-            ? Schema<U[] | undefined>
-            : Schema<U[]>;
+            ? Schema<NonNullable<U>[] | undefined>
+            : Schema<NonNullable<U>[]>;
         // ordered(type)
 
         min(limit: number): Schema<T>;
