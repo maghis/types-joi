@@ -25,6 +25,8 @@ const schema = joi
 
 type SchemaInterface = InterfaceFrom<typeof schema>;
 
+const either = joi.alternatives([joi.string(), joi.number()]).required();
+
 const test = joi
     .number()
     .optional()
