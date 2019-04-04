@@ -96,7 +96,7 @@ declare module "types-joi" {
     interface ArraySchema<T = any[] | undefined> extends AnySchema<T> {
         // sparse([enabled])
         // single([enabled])
-        items<U>(schema: BaseSchema<U>): T extends undefined
+        items<U>(schema: Schema<U>): T extends undefined
             ? Schema<U[] | undefined>
             : Schema<U[]>;
         // ordered(type)
