@@ -227,4 +227,5 @@ declare module "types-joi" {
     function object<T>(map: SchemaMap<T>): Schema<T | undefined>;
     function alternatives<A, B>(schemas: [Schema<A>, Schema<B>]): Schema<A | B>;
     function alternatives<A, B, C>(schemas: [Schema<A>, Schema<B>, Schema<C>]): Schema<A | B | C>;
+    function alternatives<A, B, C, D>(schemas: [Schema<A>, Schema<B>, Schema<C>, Schema<D>]): Schema<A | B | C | D>;
 }
