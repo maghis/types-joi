@@ -109,6 +109,7 @@ declare module "types-joi" {
     interface BooleanSchema<T> extends AnySchema<T> {
         truthy(value: any | any[]): Schema<T>;
         falsy(value: any | any[]): Schema<T>;
+        empty(value: any): Schema<T | undefined>;
         insensitive(enabled?: boolean): Schema<T>;
     }
 
