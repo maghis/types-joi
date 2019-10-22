@@ -22,7 +22,7 @@
   "author": "maghis",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "11.12.2",
-    "typescript": "3.4.1"
+    "@types/node": "12.11.2",
+    "typescript": "3.6.4"
   }
 }
