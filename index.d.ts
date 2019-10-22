@@ -64,10 +64,8 @@ declare module "types-joi" {
     }
 
     interface AnySchema<T> extends BaseSchema<T>, Extensions<Schema<T>> {
-        allow<U>(values: readonly U[]): Schema<T | U>;
         allow<U>(...values: readonly U[]): Schema<T | U>;
 
-        valid<U>(values: readonly U[]): Schema<U>;
         valid<U>(...values: readonly U[]): Schema<U>;
 
         required(): Schema<NonNullable<T>>;
