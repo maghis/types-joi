@@ -1,6 +1,6 @@
 # types-joi
 
-TypeScript definitions for joi (Object schema description language and validator for JavaScript objects) https://github.com/hapijs/joi
+TypeScript definitions for joi (Object schema description language and validator for JavaScript objects) https://joi.dev/
 
 # Getting started
 
