@@ -19,7 +19,8 @@ const schema = joi
             .array()
             .required()
             .items(joi.string().required()),
-        buf: joi.binary().required()
+        buf: joi.binary().required(),
+        allowNullButRequired: joi.string().allow(null).required(),
     })
     .required();
 
