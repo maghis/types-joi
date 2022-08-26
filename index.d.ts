@@ -68,7 +68,7 @@ declare module "types-joi" {
 
         valid<U>(...values: readonly U[]): Schema<U>;
 
-        required(): Schema<NonNullable<T>>;
+        required(): Schema<T extends undefined ? never : T>;
         optional(): Schema<T | undefined>;
 
         forbidden(): Schema<never>;
